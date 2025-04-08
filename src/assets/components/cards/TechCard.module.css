@@ -1,0 +1,35 @@
+.technologiesSection {
+    padding: 3rem 2rem;
+    background-color: #191a1a;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .techGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .techCard {
+    background-color: rgba(114, 114, 114, 0.1);
+    color: #f1c40f;
+    border: 1px solid rgba(241, 196, 15, 0.4);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .techCard:hover {
+    transform: translateY(-5px);
+    background-color: rgba(241, 196, 15, 0.1);
+  }
+  

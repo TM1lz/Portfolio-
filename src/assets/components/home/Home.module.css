@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(
+        0deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      ),
+      linear-gradient(
+        90deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      );
+    background-size: 55px 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 100vh;
+    min-height: 500px;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    color: white;
+    max-width: 700px;
+    line-height: 1.4;
+  }
+  
+  .destaque {
+    color: #f1c40f;
+    font-weight: bold;
+  }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      text-align: left; /* Alinha o texto do h1 à esquerda */
+    }
+  
+    .container {
+        
+      padding: 1rem;
+      justify-content: flex-start; /* Empurra o conteúdo pro topo/esquerda */
+      align-items: center;
+      text-align: left; /* Alinha o texto do container à esquerda */
+    }
+  }
