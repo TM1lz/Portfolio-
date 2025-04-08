@@ -1,0 +1,70 @@
+.projectsSection {
+    padding: 3rem 2rem;
+    background-color: #191a1a;
+    text-align: center;
+  }
+  
+  .title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .projectGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .projectCard {
+    width: 200px;
+    height: 140px;
+    background-color: rgba(114, 114, 114, 0.2); /* combina com seu grid */
+    border: 1px solid rgba(114, 114, 114, 0.4);
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ribbon {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    background-color: #f1c40f;
+    color: #191a1a;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+    transform: rotate(-45deg);
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.4);
+  }
+  
+  .button {
+    background-color: #f1c40f;
+    color: #191a1a;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #d4ac0d; /* um tom mais escuro do amarelo */
+  }
+  
+  .githubLink {
+    margin-top: 1rem;
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  
