@@ -1,4 +1,12 @@
+.containerApp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
+  min-height: calc(100vh - 80px); /* assumindo que a NavBar tem ~80px */
+}
 .container {
   max-width: 1200px;
 

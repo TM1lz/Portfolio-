@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <div className={style.conteinerBackground}>
+    <div className={style.containerApp}>
     <NavBar></NavBar>
       <div className={style.container}>
       <Home></Home>
