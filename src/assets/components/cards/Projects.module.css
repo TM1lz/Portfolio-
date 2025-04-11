@@ -111,46 +111,63 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
+  overflow: hidden; /* importante para conter o carrossel */
 }
 
+/* Carrossel ajustado */
 .carousel {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  height: 300px; /* tamanho fixo */
-  position: relative;
+  align-items: center;
+  max-width: 568px;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto 1.5rem auto;
   background-color: #2e2e2e;
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* imagem ocupa toda a área */
+  object-fit: cover;
   border-radius: 12px;
 }
 
+/* Botões do carrossel reposicionados */
 .carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: transparent;
   color: #f1c40f;
   font-size: 2rem;
   border: none;
   cursor: pointer;
   transition: transform 0.2s;
+  z-index: 1;
+}
+
+.carousel button:first-of-type {
+  left: 10px;
+}
+
+.carousel button:last-of-type {
+  right: 10px;
 }
 
 .carousel button:hover {
-  transform: scale(1.2);
+  transform: translateY(-50%) scale(1.2);
 }
 
 .deployLink {
+  width: auto;
   margin-top: 2rem;
   color: #191a1a;
   text-decoration: none;
-  background-color: #f1c40f ;
+  background-color: #f1c40f;
   padding: 0.5rem 1rem;
   border-radius: 12px;
   font-weight: bold;
@@ -164,6 +181,7 @@
 }
 
 .closeButton {
+  width: auto;
   margin-top: 2rem;
   background-color: transparent;
   border: 1px solid #f1c40f;
@@ -179,24 +197,47 @@
   background-color: #f1c40f;
   color: #191a1a;
 }
-/* Responsividade geral */
+
+/* Responsividade */
 @media (max-width: 768px) {
   .projectCard {
     width: 100%;
     max-width: 300px;
     height: auto;
   }
-
+  .projectCard {
+    width: 200px;
+    height: 140px;
+    background-color: rgba(114, 114, 114, 0.2);
+    border: 1px solid rgba(114, 114, 114, 0.4);
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease;
+    background: rgba(114, 114, 114, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .carousel {
     height: 200px;
   }
 
   .carousel img {
-    border-radius: 8px;
+    border-radius: 12px;
+  }
+
+  .modalOverlay {
+    padding: 0;
+  }
+
+  .modalContent {
+    padding: 1rem;
   }
 }
 
-/* Esconde os botões do carrossel em telas pequenas */
 @media (max-width: 500px) {
   .carousel button {
     display: none;

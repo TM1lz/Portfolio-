@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './Projects.module.css';
-import img from '../../../assets/img/HomeCardBemVindo.png';
-import img2 from '../../../assets/img/MineBlog.png';
+import imgR1 from '../../../assets/img/HomeCardBemVindo.png';
+import imgR2 from '../../../assets/img/AuthRainha.png';
+import imgR3 from '../../../assets/img/CradRainha.png';
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -13,13 +14,13 @@ export default function Projects() {
       title: 'Projeto 1',
       description: 'Este é o Projeto 1 - uma aplicação incrível.',
       linkdeploy: 'https://example.com/projeto1',
-      images: [img, img2],
+      images: [imgR1, imgR2, imgR3],
     },
     {
       title: 'Projeto 2',
       description: 'Blog pessoal com funcionalidades legais.',
       linkdeploy: '',
-      images: [img2],
+      images: [],
     },
     {
       title: 'Projeto 3',
