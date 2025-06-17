@@ -1,17 +1,22 @@
 import { useState } from "react";
 import styler from "./NavBar.module.css";
 
-export default function NavBar() {
+export default function NavBar({ sectionPositions }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeButton, setActiveButton] = useState("home");
   const logo = "<TM/>";
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollTo = (y, section) => {
+  const scrollTo = (section) => {
+    const y = sectionPositions[section];
+    if (y === undefined) return;
+
     setIsMenuOpen(false);
     setActiveButton(section);
+
     window.scrollTo({
       top: y,
       behavior: "smooth",
@@ -24,7 +29,6 @@ export default function NavBar() {
         <h1>{logo}</h1>
       </div>
 
-      {/* Ícone do menu hamburguer para mobile */}
       <div className={styler.hamburger} onClick={toggleMenu}>
         <div className={styler.line}></div>
         <div className={styler.line}></div>
@@ -35,7 +39,7 @@ export default function NavBar() {
         <ul>
           <li>
             <button
-              onClick={() => scrollTo(0, "home")}
+              onClick={() => scrollTo("home")}
               className={`${styler.link} ${
                 activeButton === "home" ? styler.active : ""
               }`}
@@ -45,9 +49,9 @@ export default function NavBar() {
           </li>
           <li>
             <button
-              onClick={() => scrollTo(400, "empresa")}
+              onClick={() => scrollTo("about")}
               className={`${styler.link} ${
-                activeButton === "empresa" ? styler.active : ""
+                activeButton === "about" ? styler.active : ""
               }`}
             >
               Empresa
@@ -55,9 +59,9 @@ export default function NavBar() {
           </li>
           <li>
             <button
-              onClick={() => scrollTo(900, "produtos")}
+              onClick={() => scrollTo("tech")}
               className={`${styler.link} ${
-                activeButton === "produtos" ? styler.active : ""
+                activeButton === "tech" ? styler.active : ""
               }`}
             >
               Produtos
@@ -65,9 +69,9 @@ export default function NavBar() {
           </li>
           <li>
             <button
-              onClick={() => scrollTo(1400, "contato")}
+              onClick={() => scrollTo("project")}
               className={`${styler.link} ${
-                activeButton === "contato" ? styler.active : ""
+                activeButton === "project" ? styler.active : ""
               }`}
             >
               Contato

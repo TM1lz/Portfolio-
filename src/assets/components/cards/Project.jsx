@@ -11,8 +11,8 @@ const Project = () => {
       />
       <ProjectCard
         image="/images/starbucks.jpg"
-        title="Starbucks"
-        description="Um menu de bebidas do Starbucks criado com HTML, CSS e JavaScript. Assim permitindo a escolha do sabor desejado."
+        title="Em Breve"
+        description="..."
         link="https://example.com/starbucks"
       />
       <ProjectCard

@@ -8,7 +8,7 @@ const About = () => {
         <img src={img} alt="Foto minha pessoal " />
         <div className={style.cardSocial}>
         <a
-          href="https://www.instagram.com/rainha.alimentos/"
+          target='block' href="https://www.instagram.com/rainha.alimentos/"
           className={`${style.socialContainer} ${style.containerOne}`}
         >
           {/* SVG Instagram */}
@@ -18,7 +18,7 @@ const About = () => {
         </a>
 
         <a
-          href="#"
+          href="2"
           className={`${style.socialContainer} ${style.containerTwo}`}
         >
           <svg className={style.socialSvg} viewBox="0 0 16 16">
@@ -27,7 +27,7 @@ const About = () => {
         </a>
 
         <a
-          href="#"
+          href="1"
           className={`${style.socialContainer} ${style.containerThree}`}
         >
           <svg className={style.socialSvg} viewBox="0 0 448 512">
@@ -36,7 +36,7 @@ const About = () => {
         </a>
 
         <a
-          href="#"
+          target='block' href="https://wa.me/5519982058389"
           className={`${style.socialContainer} ${style.containerFour}`}
         >
           <svg className={style.socialSvg} viewBox="0 0 16 16">
@@ -45,12 +45,15 @@ const About = () => {
         </a>
       </div>
       </div>
-      <div className={style.cardText}>
-        <h1>Alisson Pereira</h1>
-        <br />
-        <p>Criado por Deus, guiado pelo propósito e destinado ao sucesso. Com paixão por transformar ideias em experiências digitais, prazer, esse sou eu.
-           <br /><p className={style.p}>desenvolvedor front-end.</p></p>
-      </div>
+  <div className={style.cardText}>
+  <h1>Alisson Pereira</h1>
+  <br />
+  <p>
+    Criado por Deus, guiado pelo propósito e destinado ao sucesso. Com paixão por transformar ideias em experiências digitais, prazer, esse sou eu.
+    <br />
+    <span className={style.p}>desenvolvedor front-end.</span>
+  </p>
+</div>
     </div>
   );
 };

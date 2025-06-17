@@ -1,6 +1,6 @@
 import styles from './TechCard.module.css';
 
-const technologies = ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Angular', 'ReactJS'];
+const technologies = ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Angular 17', 'ReactJS'];
 
 export default function TechCard() {
   return (

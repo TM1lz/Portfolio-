@@ -14,5 +14,5 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  min-height: calc(100vh - 80px); /* assumindo que a NavBar tem ~80px */
+  /* min-height: calc(100vh - 80px); assumindo que a NavBar tem ~80px */
 }

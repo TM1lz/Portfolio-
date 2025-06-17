@@ -112,4 +112,7 @@ p {
     padding-left: 0;
     text-align: center;
   }
+  .cardText h1 {
+    text-align: center;
+  }
 }
