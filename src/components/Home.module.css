@@ -1,0 +1,70 @@
+.container_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  /* min-height: calc(100vh - 80px); */
+}
+
+/* Página Home */
+.home {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 80%;
+  min-height: calc(100vh - 80px);
+}
+
+/* Destaque com cor amarela */
+span {
+  color: #f1c40f;
+}
+
+/* Texto principal */
+.text {
+  align-items: center;
+  margin: 10px;
+  max-width: 800px;
+}
+
+.text h1 {
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Imagem com fundo transparente */
+.img {
+  max-width: 300px;
+}
+
+.img img {
+  width: 100%;
+  object-fit: cover;
+  margin: 20px;
+  /* fundo transparente respeitado ao não definir background-color */
+}
+
+/* Botão estilizado */
+
+button {
+  background-color: #f1c40f;
+  color: #2d2e2e;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,42 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  width: 100%;
+  background-color: #191a1a;
+  color: #f1c40f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  transform: translateY(-100%);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLinks li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #f1c40f;
+}
