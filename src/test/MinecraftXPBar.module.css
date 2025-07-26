@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #f1c40f;
+  text-shadow: 1px 1px 0 #000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.xpItem {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.titleDisplay,
+.levelDisplay {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.xpBarWrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 12px;
+  background-color: #000;
+  border: 1px solid #222;
+  border-radius: 8px;
+  box-shadow: inset 0 0 2px #555;
+  overflow: hidden;
+}
+
+.xpFill {
+  height: 100%;
+  transition: width 1s ease-in-out;
+}

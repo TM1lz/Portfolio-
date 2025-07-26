@@ -6,17 +6,16 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  min-height: calc(100vh - 80px); /* assumindo que a NavBar tem ~80px */
 }
 
 /* Container genérico */
 /* Main CSS */
 .main {
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 80%;
   min-height: 80px;
   background-color: #2d2e2e;
+  border-radius: 20px;
 }
