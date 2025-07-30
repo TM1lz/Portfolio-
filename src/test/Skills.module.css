@@ -5,6 +5,8 @@
   color: #f1c40f;
   width: 100%;
   box-sizing: border-box;
+  display: grid;
+  justify-content: center ;
 }
 
 .skillsSection h2 {
@@ -19,6 +21,7 @@
   justify-content: center;
   gap: 1.5rem;
   padding: 0 1rem;
+  min-width: 700px;
 }
 
 .skill {

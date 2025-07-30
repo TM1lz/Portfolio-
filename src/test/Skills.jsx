@@ -1,6 +1,6 @@
 import style from "./Skills.module.css";
 import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiCisco } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiCisco , SiMysql} from "react-icons/si";
 
 function Skills() {
   return (
@@ -16,6 +16,7 @@ function Skills() {
         <div className={style.skill}><FaGithub /> <span>GitHub</span></div>
         <div className={style.skill}><FaHtml5 /> <span>HTML5</span></div>
         <div className={style.skill}><SiCisco /> <span>Cisco</span></div>
+        <div className={style.skill}><SiMysql /> <span>MySQL</span></div>
       </div>
     </section>
   );
