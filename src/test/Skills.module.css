@@ -4,13 +4,16 @@
   background-color: #191a1a;
   color: #f1c40f;
   width: 100%;
+  max-width: 100vw;
   box-sizing: border-box;
-  display: grid;
-  justify-content: center ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .skillsSection h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   margin-bottom: 2rem;
   color: #f1c40f;
 }
@@ -20,8 +23,10 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
   justify-content: center;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
   padding: 0 1rem;
-  min-width: 700px;
+  box-sizing: border-box;
 }
 
 .skill {
@@ -59,10 +64,6 @@
 
 /* Responsividade extra para dispositivos muito pequenos */
 @media (max-width: 480px) {
-  .skillsSection h2 {
-    font-size: 1.8rem;
-  }
-
   .skillsGrid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;

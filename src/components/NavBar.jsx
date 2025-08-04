@@ -1,39 +1,59 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./Navbar.module.css";
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const minLogo = "<Tm/>";
-
+  // Mostrar navbar ao rolar
   useEffect(() => {
     const handleScroll = () => {
-      const currentY = window.scrollY;
-
-      if (currentY !== 0) {
-        setVisible(true);
-      } else {
-        // Scroll para cima
-        setVisible(false);
-      }
-      console.log(currentY);
-      setLastScrollY(currentY);
+      setVisible(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
+
+  // Fecha menu ao clicar em link (mobile)
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <nav className={`${style.navbar} ${!visible ? style.hide : ""}`}>
-      <div className={style.logo}>{minLogo}</div>
-      <ul className={style.navLinks}>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
+    <nav className={`${style.navbar} ${visible ? "" : style.hide}`}>
+      <div className={style.logo}>{"<Tm/>"}</div>
+
+      <button
+        className={style.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className={`${style.bar} ${menuOpen ? style.bar1 : ""}`}></span>
+        <span className={`${style.bar} ${menuOpen ? style.bar2 : ""}`}></span>
+        <span className={`${style.bar} ${menuOpen ? style.bar3 : ""}`}></span>
+      </button>
+
+      <ul className={`${style.navLinks} ${menuOpen ? style.open : ""}`}>
+        <li>
+          <a href="#home" onClick={handleLinkClick}>
+            Início
+          </a>
+        </li>
+        <li>
+          <a href="#projects" onClick={handleLinkClick}>
+            Projetos
+          </a>
+        </li>
+        <li>
+          <a href="#certifications" onClick={handleLinkClick}>
+            Certificações
+          </a>
+        </li>
+        <li>
+          <a href="#contato" onClick={handleLinkClick}>
+            Contato
+          </a>
+        </li>
       </ul>
     </nav>
   );

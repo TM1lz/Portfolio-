@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react';
 import styles from './Certifications.module.css';
 import MinecraftXPBar from './MinecraftXPBar';
 
@@ -43,8 +44,8 @@ const certifications = [
     "year": 2023,
     "tags": ["Back-end", "APIs", "Segurança"],
     "porcentagem": 100
-  },{
-    
+  },
+  {
     "title": "Angular",
     "platform": "Udemy",
     "year": 2023,
@@ -53,9 +54,9 @@ const certifications = [
   }
 ]
 
-export default function Certifications() {
+const Certifications = forwardRef((props, ref) => {
   return (
-    <div className={styles.certifications}>
+    <div id='certifications' ref={ref} className={styles.certifications}>
       <h2>Cursos e Certificações</h2>
       <div className={styles.cards}>
         {certifications.map((cert, index) => (
@@ -74,4 +75,6 @@ export default function Certifications() {
       </div>
     </div>
   );
-}
+});
+
+export default Certifications;

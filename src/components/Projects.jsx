@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './Projects.module.css';
 import portfolioImg from '../assets/img/RainhaIMG.png';
 import apiImg from '../assets/img/RainhaIMG.png';
@@ -27,9 +27,10 @@ const projects = [
     demo: 'https://landingpage.vercel.app',
   },
 ];               
-export default function Projects() {
+
+const Projects = forwardRef((props, ref) => {
   return (
-    <section className={styles.projectsSection}>
+    <section id="projects" ref={ref} className={styles.projectsSection}>
       <h2 className={styles.title}>Meus Projetos</h2>
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
@@ -54,4 +55,7 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+});
+
+
+export default Projects;

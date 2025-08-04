@@ -1,4 +1,3 @@
-/* src/components/Navbar.module.css */
 .navbar {
   width: 100%;
   background-color: #191a1a;
@@ -12,6 +11,7 @@
   z-index: 1000;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 .hide {
@@ -24,12 +24,14 @@
   color: #f1c40f;
 }
 
+/* Nav links desktop */
 .navLinks {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
+/* Links estilo */
 .navLinks li a {
   color: #bbb;
   text-decoration: none;
@@ -39,4 +41,68 @@
 
 .navLinks li a:hover {
   color: #f1c40f;
+}
+
+/* Hamburger button - escondido desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+/* Hamburger barras */
+.bar {
+  width: 28px;
+  height: 3px;
+  background-color: #f1c40f;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: 1px;
+}
+
+/* Animar o hamburger aberto */
+.bar1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar2 {
+  opacity: 0;
+}
+
+.bar3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #191a1a;
+    height: calc(100vh - 60px);
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+
+  .navLinks.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
