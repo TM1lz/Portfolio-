@@ -26,7 +26,6 @@ function App() {
         skills: skillsRef.current?.offsetTop || 0,
       });
     }
-
     updatePositions();
 
     // Atualiza ao redimensionar a janela (responsividade)
