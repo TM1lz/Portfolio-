@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Certifications from "./test/Certifications";
 import Skills from "./test/Skills";
+import ContactCard from "./test/ContactCard";
 
 function App() {
   // Refs para as seções
@@ -12,6 +13,7 @@ function App() {
   const projectsRef = useRef(null);
   const certificationsRef = useRef(null);
   const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
   // Estado para guardar posições/offsets das seções
   const [sectionPositions, setSectionPositions] = useState({});
@@ -24,6 +26,7 @@ function App() {
         projects: projectsRef.current?.offsetTop || 0,
         certifications: certificationsRef.current?.offsetTop || 0,
         skills: skillsRef.current?.offsetTop || 0,
+        contact: contactRef.current?.offsetTop || 0,
       });
     }
     updatePositions();
@@ -45,6 +48,7 @@ function App() {
         <Projects ref={projectsRef} />
         <Certifications ref={certificationsRef} />
         <Skills ref={skillsRef} />
+        <ContactCard ref={contactRef} />
       </div>
       <div className={style.footer}>
         <p>© 2023 Meu Portfólio. Todos os direitos reservados.</p>

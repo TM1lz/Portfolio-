@@ -14,12 +14,31 @@ const Home = forwardRef((props, ref) => {
           <p>
             Desenvolvedor Front-end, com foco em ReactJS, e sempre buscando aprender mais sobre o mundo da programação.
           </p>
-          <button className={style.button}>Entre em contato</button>
-          <button className={style.button}>CV download</button>
+
+          <button 
+            onClick={() => window.location.href="#contato"} 
+            className={style.button}
+          >
+            Entre em contato
+          </button>
+
+          <button>
+            <a 
+              href="/cv-tmilz.pdf" 
+              download 
+              className={style.button}
+            >
+              📄 CV Download
+            </a>
+          </button>
         </div>
 
         <div className={style.img}>
-          <img src={tmilz} alt="Ilustração de desenvolvedor" className={style.imageElement} />
+          <img 
+            src={tmilz} 
+            alt="Ilustração de desenvolvedor" 
+            className={style.imageElement} 
+          />
         </div>
       </div>
 

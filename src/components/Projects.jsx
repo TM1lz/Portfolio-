@@ -9,17 +9,17 @@ import landingImg from '../assets/img/RainhaIMG.png';
 
 const projects = [
   {
-    title: 'Portfólio Pessoal',
-    description: 'Site pessoal feito com ReactJS e CSS Modules.',
+    title: 'Rainha Alimentos',
+    description: 'Site feito para por em prática o aprendizado.',
     image: portfolioImg,
-    github: 'https://github.com/seuusuario/portfolio',
-    demo: 'https://seuportfolio.vercel.app',
+    github: 'https://github.com/TM1lz/Rainha_Project',
+    demo: 'https://tm1lz.github.io/Rainha_Project/',
   },
   {
     title: 'API NodeJS',
     description: 'Backend de autenticação com JWT usando NodeJS.',
     image: apiImg,
-    github: 'https://github.com/seuusuario/api-node',
+    github: 'https://github.com/TM1lz/GmanF',
     demo: '',
   },
   {
