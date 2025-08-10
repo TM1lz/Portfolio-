@@ -3,8 +3,8 @@ import styles from "./SocialIcons.module.css";
 const SocialIcons = () => {
   return (
     <div className={styles.card}>
-        <a
-          href="https://www.instagram.com/rainha.alimentos/"
+        <a target="blank"
+          href="https://www.instagram.com/tmilz_p/#"
           className={`${styles.socialContainer} ${styles.containerOne}`}
         >
           {/* SVG Instagram */}
