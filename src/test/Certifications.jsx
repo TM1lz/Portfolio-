@@ -53,7 +53,7 @@ const certifications = [
     "porcentagem": 60
   }
 ]
-
+//Teste
 const Certifications = forwardRef((props, ref) => {
   return (
     <div id='certifications' ref={ref} className={styles.certifications}>
