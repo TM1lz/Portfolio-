@@ -3,31 +3,30 @@ import React, { forwardRef } from 'react';
 import styles from './Projects.module.css';
 
 // Substitua pelas suas imagens reais
-import portfolioImg from '../assets/img/RainhaIMG.png';
-import apiImg from '../assets/img/RainhaIMG.png';
-import landingImg from '../assets/img/RainhaIMG.png';
+import rainhaProjectIMG from '../assets/img/RainhaIMG.png';
+import mineBlog from '../assets/img/MineBlog.jpg';
 
 const projects = [
   {
     title: 'Rainha Alimentos',
     description: 'Site feito para por em prática o aprendizado.',
-    image: portfolioImg,
+    image: rainhaProjectIMG,
     github: 'https://github.com/TM1lz/Rainha_Project',
     demo: 'https://tm1lz.github.io/Rainha_Project/',
   },
   {
-    title: 'API NodeJS',
-    description: 'Backend de autenticação com JWT usando NodeJS.',
-    image: apiImg,
-    github: 'https://github.com/TM1lz/GmanF',
+    title: 'FomsBot',
+    description: 'BackEnd , recebe um formulario e repassa para algum ou seu whatsapp',
+    image: "",
+    github: 'https://github.com/TM1lz/BotForm',
     demo: '',
   },
   {
-    title: 'Landing Page Responsiva',
-    description: 'Landing page moderna e responsiva.',
-    image: landingImg,
-    github: 'https://github.com/seuusuario/landing-page',
-    demo: 'https://landingpage.vercel.app',
+    title: 'ReactJS Projects',
+    description: 'Jogo da Forca , MiniBlog , NodeJS , CRUD',
+    image: mineBlog,
+    github: 'https://github.com/TM1lz/ReactProjetos',
+    demo: '',
   },
 ];
 

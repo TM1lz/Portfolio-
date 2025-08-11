@@ -26,7 +26,7 @@ const ContactCard = React.forwardRef((props, ref) => {
     setSubmitted(false);
 
     try {
-      const response = await fetch("http://localhost:3000/enviar-form", {
+      const response = await fetch("", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -36,10 +36,10 @@ const ContactCard = React.forwardRef((props, ref) => {
       setSubmitted(true);
       setTimeout(() => {
         setFormData({
-          name: "",
+          nome: "",
           email: "",
-          phone: "",
-          message: "",
+          telefone: "",
+          mensagem: "",
         });
         setSubmitted(false);
         setError("");
