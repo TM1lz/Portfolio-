@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import style from './Home.module.css';
 import tmilz from "../assets/img/o.png";
-
 const Home = forwardRef((props, ref) => {
   return (
     <div id="home" ref={ref} className={style.container_home}>
@@ -24,7 +23,7 @@ const Home = forwardRef((props, ref) => {
 
           <button>
             <a 
-              href="/cv-tmilz.pdf" 
+              href="../assets/files/AlissonTI.pdf"
               download 
               className={style.button}
             >

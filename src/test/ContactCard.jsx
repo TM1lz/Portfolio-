@@ -26,7 +26,7 @@ const ContactCard = React.forwardRef((props, ref) => {
     setSubmitted(false);
 
     try {
-      const response = await fetch("", {
+      const response = await fetch("https://back-end-rainha-alimentos.vercel.app/cliente", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -36,10 +36,13 @@ const ContactCard = React.forwardRef((props, ref) => {
       setSubmitted(true);
       setTimeout(() => {
         setFormData({
-          nome: "",
-          email: "",
-          telefone: "",
-          mensagem: "",
+         razaoSocial : "",
+         cpfCnpj : "",
+         nome: "",
+         cidade: "",
+         email: "",
+         telefone: "",
+         mensagem: "",
         });
         setSubmitted(false);
         setError("");
@@ -67,8 +70,8 @@ const ContactCard = React.forwardRef((props, ref) => {
           Nome:
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="nome"
+            value={formData.nome}
             onChange={handleChange}
             required
             placeholder="Digite seu nome"
@@ -91,8 +94,8 @@ const ContactCard = React.forwardRef((props, ref) => {
           Telefone (opcional):
           <input
             type="tel"
-            name="phone"
-            value={formData.phone}
+            name="telefone"
+            value={formData.telefone}
             onChange={handleChange}
             placeholder="(00) 00000-0000"
           />
@@ -101,9 +104,9 @@ const ContactCard = React.forwardRef((props, ref) => {
         <label>
           Assunto de Interesse:
           <textarea
-            name="message"
+            name="mensagem"
             rows="4"
-            value={formData.message}
+            value={formData.mensagem}
             onChange={handleChange}
             required
             placeholder="Me diga como posso ajudar..."
